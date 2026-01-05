@@ -1,0 +1,41 @@
+.clickable {
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    width: 80%;
+    max-width: 300px;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.75rem 0;
+    font-size: 1rem;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 0.6rem;
+}

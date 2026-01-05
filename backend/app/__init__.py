@@ -3,6 +3,7 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 
 from .routes import main
 from .google_fit import google_fit
+from .weight import weight_api
 
 
 def create_app():
@@ -20,4 +21,5 @@ def create_app():
         x_host=1
     )
     app.register_blueprint(google_fit)
+    app.register_blueprint(weight_api)
     return app
