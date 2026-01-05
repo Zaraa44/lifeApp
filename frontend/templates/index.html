@@ -9,17 +9,61 @@
     <link rel="manifest" href="/manifest.json" />
     <link rel="stylesheet" href="/static/css/base.css" />
 
-    <!-- iOS PWA support -->
+    <!-- iOS PWA -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Health" />
     <link rel="apple-touch-icon" href="/static/icons/icon-192.png" />
 </head>
 <body>
 
-<h1>Health Tracker</h1>
-<p>Dit draait offline.</p>
+<header class="app-header">
+    <h1>Dashboard</h1>
+    <span class="date">Vandaag</span>
+</header>
 
+<main class="stats-grid">
+
+    <section class="stat-card">
+        <h2>Gewicht</h2>
+        <p class="stat-value">72.4</p>
+        <span class="stat-unit">kg</span>
+    </section>
+
+    <section class="stat-card">
+        <h2>Slaap</h2>
+        <p class="stat-value">7.5</p>
+        <span class="stat-unit">uur</span>
+    </section>
+
+    <section class="stat-card">
+        <h2>Stappen</h2>
+        <p class="stat-value">8.230</p>
+        <span class="stat-unit">stappen</span>
+    </section>
+
+    <section class="stat-card">
+        <h2>Water</h2>
+        <p class="stat-value">2.1</p>
+        <span class="stat-unit">liter</span>
+    </section>
+
+
+</main>
+<section class="long-widgets">
+
+    <div class="long-card">
+        <h2>Trend van deze week</h2>
+        <p class="long-value">Consistent</p>
+        <span class="long-meta">Op basis van slaap & stappen</span>
+    </div>
+
+    <div class="long-card">
+        <h2>Laatste notitie</h2>
+        <p class="long-value">Goede energie vandaag</p>
+        <span class="long-meta">Gelogd om 09:15</span>
+    </div>
+
+</section>
 <script src="/static/js/app.js"></script>
 </body>
 </html>
