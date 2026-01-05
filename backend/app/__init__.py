@@ -1,5 +1,9 @@
 from flask import Flask
+from werkzeug.middleware.proxy_fix import ProxyFix
+
 from .routes import main
+from .google_fit import google_fit
+
 
 def create_app():
     app = Flask(
@@ -10,5 +14,10 @@ def create_app():
 
     app.config.from_object("app.config.Config")
     app.register_blueprint(main)
-
+    app.wsgi_app = ProxyFix(
+        app.wsgi_app,
+        x_proto=1,
+        x_host=1
+    )
+    app.register_blueprint(google_fit)
     return app

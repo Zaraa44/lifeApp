@@ -8,22 +8,57 @@
 
     <link rel="manifest" href="/manifest.json" />
     <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" href="/static/css/menu.css" />
+    <link rel="stylesheet" href="/static/css/widget.css" />
 
     <!-- iOS PWA -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="theme-color" content="#0e0e0e" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#0e0e0e" />
 
     <meta name="apple-mobile-web-app-title" content="Health" />
     <link rel="apple-touch-icon" href="/static/icons/icon-192.png" />
 
 
 </head>
+<div class="menu-overlay hidden" id="menuOverlay">
+    <div class="menu-sheet">
+        <div class="menu-handle"></div>
+
+        <button class="menu-item">
+            <span class="icon">＋</span>
+            <span class="text">
+                <strong>Nieuwe invoer</strong>
+                <small>Log gewicht, slaap of water</small>
+            </span>
+        </button>
+
+        <button class="menu-item">
+            <span class="icon">📊</span>
+            <span class="text">
+                <strong>Geschiedenis</strong>
+                <small>Bekijk eerdere dagen</small>
+            </span>
+        </button>
+
+        <button class="menu-item">
+
+            <span class="text">
+                <strong><button onclick="location.href='/auth/login'">
+    Koppel Google Fit
+</button></strong>
+
+            </span>
+        </button>
+    </div>
+</div>
+
+
 <body>
+<button class="menu-button" id="menuBtn">⋯</button>
 
 <header class="app-header">
     <h1>Dashboard</h1>
-    <span class="date">Vandaag</span>
 </header>
 
 <main class="stats-grid">
@@ -40,11 +75,13 @@
         <span class="stat-unit">uur</span>
     </section>
 
-    <section class="stat-card">
-        <h2>Stappen</h2>
-        <p class="stat-value">8.230</p>
-        <span class="stat-unit">stappen</span>
-    </section>
+<section class="stat-card">
+    <h2>Stappen</h2>
+    <p class="stat-value" id="steps-value">–</p>
+    <span class="stat-unit" id="steps-km">– km</span>
+</section>
+
+
 
     <section class="stat-card">
         <h2>Water</h2>
@@ -67,8 +104,22 @@
         <p class="long-value">Goede energie vandaag</p>
         <span class="long-meta">Gelogd om 09:15</span>
     </div>
+<section class="big-widget">
+    <h2>Overzicht deze week</h2>
+
+    <p class="big-widget-value">Goede balans</p>
+
+    <p class="big-widget-description">
+        Je slaap en beweging zijn deze week consistent gebleven.
+        Blijf dit ritme vasthouden.
+    </p>
+</section>
 
 </section>
 <script src="/static/js/app.js"></script>
+<script src="/static/js/fetch.js"></script>
+<script src="/static/js/menu.js"></script>
+<script src="/static/js/steps.js"></script>
+<script src="/static/js/sw.js"></script>
 </body>
 </html>

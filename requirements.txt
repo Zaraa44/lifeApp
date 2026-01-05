@@ -1,2 +1,6 @@
-flask
-python-dotenv
+flask~=3.1.2
+python-dotenv~=1.2.1
+
+Werkzeug~=3.1.4
+requests~=2.32.5
+google-auth-oauthlib~=1.2.3
