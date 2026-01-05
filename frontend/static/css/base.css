@@ -20,8 +20,6 @@ body {
     color: var(--text);
 }
 
-/* Header */
-
 .app-header {
     display: flex;
     justify-content: space-between;
@@ -39,16 +37,11 @@ body {
     font-size: 0.9rem;
 }
 
-/* Grid */
-
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
-
-
-/* Tablet / desktop */
 
 @media (min-width: 768px) {
     .stats-grid {
@@ -56,5 +49,18 @@ body {
     }
 }
 
+html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.back {
+    color: var(--accent);
+}
 
 

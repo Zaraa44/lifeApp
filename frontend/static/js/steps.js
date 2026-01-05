@@ -40,3 +40,10 @@ if (kmEl) {
 }
 
 document.addEventListener("DOMContentLoaded", loadSteps);
+
+const stepsCard = document.getElementById("steps-card");
+if (stepsCard) {
+    stepsCard.addEventListener("click", () => {
+        window.location.href = "/steps";
+    });
+}

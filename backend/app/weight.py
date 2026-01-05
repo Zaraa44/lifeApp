@@ -46,3 +46,8 @@ def add_weight():
     write_weights(data)
 
     return jsonify(entry), 201
+
+@weight_api.route("/api/weight/all", methods=["GET"])
+def get_all_weights():
+    data = read_weights()
+    return jsonify(data)

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Persoonlijke gegevens</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" href="/static/css/menu.css" />
+    <link rel="stylesheet" href="/static/css/widget.css" />
+    <link rel="stylesheet" href="/static/css/weight.css" />
+    <link rel="stylesheet" href="/static/css/profile.css" />
+</head>
+<body class="dark">
+
+<header class="page-header">
+    <a href="/" class="back">←</a>
+    <h1>Persoonlijke gegevens</h1>
+</header>
+
+<main class="page-content">
+
+    <label class="form-field">
+        <span>Geslacht</span>
+        <select id="profile-sex">
+            <option value="">–</option>
+            <option value="male">Man</option>
+            <option value="female">Vrouw</option>
+        </select>
+    </label>
+
+    <label class="form-field">
+        <span>Leeftijd</span>
+        <input type="number" id="profile-age" min="0">
+    </label>
+
+    <label class="form-field">
+        <span>Lengte (cm)</span>
+        <input type="number" id="profile-height" min="0">
+    </label>
+
+    <button class="primary" id="save-profile">
+        Opslaan
+    </button>
+<hr class="divider">
+
+<section class="profile-section">
+    <h3>Google Fit</h3>
+
+    <button class="secondary" id="google-connect">
+        Koppel Google Fit
+    </button>
+
+    <p class="muted" id="google-status">
+        –
+    </p>
+</section>
+
+</main>
+<script src="/static/js/app.js"></script>
+<script src="/static/js/weight.js"></script>
+<script src="/static/js/menu.js"></script>
+<script src="/static/js/steps.js"></script>
+<script src="/static/js/sw.js"></script>
+<script src="/static/js/profile.js"></script>
+</body>
+</html>

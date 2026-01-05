@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Stappen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/steps.css">
+</head>
+<body class="dark">
+
+<header class="page-header">
+    <a href="/" class="back">←</a>
+    <h1>Stappen</h1>
+</header>
+
+<main class="page-content">
+
+   <section class="steps-today">
+    <h2 class="section-title">Vandaag</h2>
+
+    <div class="steps-ring">
+        <svg viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="52" class="ring-bg"/>
+            <circle cx="60" cy="60" r="52" class="ring-progress" id="ring-progress"/>
+        </svg>
+        <div class="ring-center">
+            <div class="steps-count" id="steps-count">–</div>
+            <div class="steps-goal">
+                / <span id="steps-goal">8000</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="steps-week">
+    <h2 class="section-title muted">Afgelopen 7 dagen</h2>
+    <div class="steps-bar-chart" id="steps-bar-chart"></div>
+</section>
+
+<section class="steps-history-wrapper">
+    <h2 class="section-title muted">Historie</h2>
+    <div class="steps-history" id="steps-history"></div>
+</section>
+
+
+</main>
+
+<script src="/static/js/steps-detail.js"></script>
+</body>
+</html>

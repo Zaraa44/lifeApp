@@ -1,13 +1,13 @@
 
-const menuBtn = document.getElementById("menuBtn");
-const menuOverlay = document.getElementById("menuOverlay");
 
-menuBtn.addEventListener("click", () => {
-    menuOverlay.classList.remove("hidden");
-});
+document.getElementById("menuBtn")
+    .addEventListener("click", () => {
+        window.location.href = "/profile";
+    });
 
-menuOverlay.addEventListener("click", (e) => {
-    if (e.target === menuOverlay) {
-        menuOverlay.classList.add("hidden");
-    }
-});
+const workoutBtn = document.getElementById("workoutBtn");
+if (workoutBtn) {
+    workoutBtn.addEventListener("click", () => {
+        window.location.href = "/workout";
+    });
+}

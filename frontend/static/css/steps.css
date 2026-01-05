@@ -1,0 +1,127 @@
+.steps-ring {
+    position: relative;
+    width: 160px;
+    margin: 1.5rem auto;
+}
+
+.steps-ring svg {
+    width: 100%;
+}
+
+.ring-bg {
+    fill: none;
+    stroke: rgba(255,255,255,0.1);
+    stroke-width: 8;
+}
+
+.ring-progress {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 326;
+    stroke-dashoffset: 326;
+    transition: stroke-dashoffset 0.4s ease;
+}
+
+.ring-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.steps-count {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.steps-goal {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.steps-goal-set {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.steps-history {
+    margin-top: 1.5rem;
+}
+
+.steps-day {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+}
+
+.section-title.muted {
+    color: var(--muted);
+}
+
+.steps-today {
+    margin-bottom: 2rem;
+}
+
+.steps-history-wrapper {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 1.2rem;
+}
+
+.steps-day {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+}
+
+.steps-day:not(:last-child) {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.steps-week {
+    margin-bottom: 1.8rem;
+}
+
+.steps-bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    height: 120px;
+    padding: 0.5rem 0;
+}
+
+.steps-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.steps-bar-rect {
+    width: 100%;
+    background: var(--accent);
+    border-radius: 6px 6px 2px 2px;
+    min-height: 6px;
+    opacity: 0.85;
+}
+
+.steps-bar-label {
+    font-size: 0.7rem;
+    color: var(--muted);
+}
+

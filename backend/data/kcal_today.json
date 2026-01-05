@@ -1,0 +1,17 @@
+{
+  "date": "2026-01-06",
+  "activities": {
+    "workouts": [],
+    "steps": {
+      "type": "steps",
+      "steps": 0,
+      "pace": "average",
+      "speed_m_s": 1.34,
+      "met": 3.5,
+      "distance_km": 0.0,
+      "duration_min": 0.0,
+      "kcal": 0
+    }
+  },
+  "total_kcal": 0
+}
