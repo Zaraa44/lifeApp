@@ -1,15 +1,16 @@
 from flask import Flask
 from werkzeug.middleware.proxy_fix import ProxyFix
 
+from backend.api.google_fit import google_fit
+from backend.api.kcal import kcal_api
+from backend.api.profile import profile_api
+from backend.api.routes import main
+from backend.api.weight import weight_api
+
 # ===== PAGES / ROUTES =====
 
 
 # ===== API BLUEPRINTS =====
-from api.google_fit import google_fit
-from api.weight import weight_api
-from api.profile import profile_api
-from api.kcal import kcal_api
-from api.routes import main
 
 
 app = Flask(
