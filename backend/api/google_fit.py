@@ -1,3 +1,4 @@
+import os
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from pathlib import Path
@@ -156,22 +157,31 @@ def fetch_steps_for_day(headers, tz, day):
 
 
 def get_flow():
-    return Flow.from_client_config(
+    client_id = os.getenv("GOOGLE_CLIENT_ID")
+    client_secret = os.getenv("GOOGLE_CLIENT_SECRET")
+    redirect_uri = os.getenv("GOOGLE_REDIRECT_URI")
+
+    if not client_id:
+        raise RuntimeError("GOOGLE_CLIENT_ID ontbreekt")
+    if not redirect_uri:
+        raise RuntimeError("GOOGLE_REDIRECT_URI ontbreekt")
+
+    flow = Flow.from_client_config(
         {
             "web": {
-                "client_id": current_app.config["GOOGLE_CLIENT_ID"],
-                "client_secret": current_app.config["GOOGLE_CLIENT_SECRET"],
+                "client_id": client_id,
+                "client_secret": client_secret,
                 "auth_uri": "https://accounts.google.com/o/oauth2/auth",
                 "token_uri": "https://oauth2.googleapis.com/token",
-                "redirect_uris": [
-                    current_app.config["GOOGLE_REDIRECT_URI"]
-                ]
+                "redirect_uris": [redirect_uri],
             }
         },
         scopes=SCOPES,
-        redirect_uri=current_app.config["GOOGLE_REDIRECT_URI"],
     )
 
+    flow.redirect_uri = redirect_uri
+
+    return flow
 
 @google_fit.route("/api/google/status")
 def google_status():
