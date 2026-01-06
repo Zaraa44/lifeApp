@@ -2,7 +2,7 @@ const CACHE_NAME = "health-cache-v1";
 const ASSETS = [
     "/",
     "/static/css/base.css",
-    "/static/js/healthApp.js",
+    "/static/js/app.js",
 ];
 
 self.addEventListener("install", event => {
