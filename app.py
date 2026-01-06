@@ -15,8 +15,8 @@ from backend.api.weight import weight_api
 
 app = Flask(
     __name__,
-    template_folder="../frontend/templates",
-    static_folder="../frontend/static",
+    template_folder="frontend/templates",
+    static_folder="frontend/static",
 )
 
 # ===== CONFIG =====
