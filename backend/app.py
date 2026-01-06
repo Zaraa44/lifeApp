@@ -36,5 +36,3 @@ app.register_blueprint(profile_api)
 app.register_blueprint(kcal_api)
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
