@@ -15,7 +15,7 @@ def create_app():
         static_folder="../../frontend/static",
     )
 
-    app.config.from_object("app.config.Config")
+    app.config.from_object("healthApp.config.Config")
     app.register_blueprint(main)
     app.wsgi_app = ProxyFix(
         app.wsgi_app,
